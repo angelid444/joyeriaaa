@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joyería AA</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Joyería AA</h1>
+    <nav>
+      <select id="categoryFilter">
+        <option value="Todos">Todos</option>
+        <option value="Pendientes">Pendientes</option>
+        <option value="Collares">Collares</option>
+        <option value="Anillos">Anillos</option>
+        <option value="Pulseras">Pulseras</option>
+        <option value="Tobilleras">Tobilleras</option>
+      </select>
+    </nav>
+  </header>
+  <main>
+    <section id="productList" class="product-list"></section>
+    <aside id="cart">
+      <h2>Carrito</h2>
+      <ul id="cartItems"></ul>
+      <p>Total: $<span id="totalAmount">0</span></p>
+      <button onclick="checkout()">Ir a pagar</button>
+    </aside>
+    <section id="invoicePreview" class="hidden">
+      <h2>Factura</h2>
+      <div id="invoiceContent"></div>
+      <button onclick="downloadPDF()">Descargar PDF</button>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
